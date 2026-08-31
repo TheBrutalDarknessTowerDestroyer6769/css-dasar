@@ -1,0 +1,21 @@
+/* # = ekslusif ( tag hanya bisa dipakai 1) */
+/* . = universal(bisa lebih dar satu tag) */
+
+#judul {
+    color:coral
+}
+#Heading_bio {
+    color: rgb(91, 0, 209);
+}
+p {
+    font-size: 16px;
+}
+
+.bio {
+    Color: purple;
+    line-height: 1.5;
+}
+
+#nama {
+    color: rgb(52, 0, 196);
+}
