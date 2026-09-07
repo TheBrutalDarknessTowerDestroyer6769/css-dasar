@@ -1,0 +1,19 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom, #f4f8f4, #ff4444);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    color: #5f0000;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1,6;
+    text-align: justify;
+    color:rgb(0, 41, 77);
+
+}
