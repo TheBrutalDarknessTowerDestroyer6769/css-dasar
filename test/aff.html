@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rhodes Island // Command Deck</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="signal-field" aria-hidden="true"></canvas>
+	<main class="shell">
+		<header class="topbar">
+			<div class="brand"><div class="brand-mark"></div><div>Rhodes Island <span>// 01</span></div></div>
+			<nav aria-label="Main navigation">
+				<button class="active" data-section="overview">Overview</button>
+				<button data-section="operations">Operations</button>
+				<button data-section="archive">Archive</button>
+			</nav>
+			<div class="status"><i></i> System nominal</div>
+		</header>
+
+		<section class="hero" id="overview">
+			<div>
+				<div class="eyebrow">Secure channel / Doctor access granted</div>
+				<h1>Welcome,<br><em>doctor.</em></h1>
+				<p class="intro">The landship is moving through a quiet sector. Your operators are ready, the map is open, and the next decision is yours.</p>
+			</div>
+			<aside class="hero-aside">
+				<div class="aside-label">Current location</div>
+				<div class="aside-value">Chernobog<br>periphery</div>
+				<div class="aside-label">Mobile city integrity / 76%</div>
+				<div class="meter"><span></span></div>
+			</aside>
+		</section>
+
+		<section class="bottom-grid" id="operations">
+			<article class="panel">
+				<div class="panel-head"><strong>Live intelligence</strong><span>Updated 02:14:09</span></div>
+				<div class="intel-list">
+					<div class="intel"><div class="intel-tag">01 / Weather</div><h2>Acid rain</h2><p>Visibility reduced in sector 04.</p></div>
+					<div class="intel"><div class="intel-tag">02 / Personnel</div><h2>12 ready</h2><p>Squad deployment window is open.</p></div>
+					<div class="intel"><div class="intel-tag">03 / Signal</div><h2>Clear</h2><p>No hostile broadcast detected.</p></div>
+				</div>
+			</article>
+			<article class="panel">
+				<div class="panel-head"><strong>Priority operations</strong><span>03 active</span></div>
+				<div class="panel-body">
+					<div class="mission"><div><h3>First response</h3><p>Difficulty // standard</p></div><span class="mission-num">01</span></div>
+					<div class="mission"><div><h3>Silent watch</h3><p>Difficulty // elevated</p></div><span class="mission-num">02</span></div>
+					<div class="mission"><div><h3>Supply route</h3><p>Difficulty // standard</p></div><span class="mission-num">03</span></div>
+					<button class="launch" id="launch-button">Open command map</button>
+				</div>
+			</article>
+		</section>
+
+		<section class="panel operator-panel" id="archive">
+			<div class="panel-head"><strong>Operator archive</strong><span>08 registered</span></div>
+			<div class="panel-body operator-layout">
+				<div class="operator-grid" aria-label="Available operators">
+					<button class="operator-card selected" data-name="Lappland" data-role="Guard // Lord" data-note="A sharp and unpredictable blade. Deployment clearance: green." data-rarity="6★" data-faction="Rhodes Island"><img src="assets/operators/lappland.png" alt="Lappland operator portrait" loading="lazy"><span class="operator-role">Guard // Lord</span><span class="operator-name">Lappland</span></button>
+					<button class="operator-card" data-name="Exusiai" data-role="Sniper // Marksman" data-note="A high-speed marksman with a bright combat record. Deployment clearance: green."><img src="assets/operators/exusiai.png" alt="Exusiai operator portrait" loading="lazy"><span class="operator-role">Sniper // Marksman</span><span class="operator-name">Exusiai</span></button>
+					<button class="operator-card" data-name="Ch'en" data-role="Guard // Swordmaster" data-note="A decisive frontline officer. Deployment clearance: amber."><img src="assets/operators/chen.png" alt="Ch'en operator portrait" loading="lazy"><span class="operator-role">Guard // Swordmaster</span><span class="operator-name">Ch'en</span></button>
+					<button class="operator-card" data-name="Raidian" data-role="Specialist // Unverified" data-note="No matching standard Arknights operator asset was found. Profile retained as an encrypted outer-route record."><img src="assets/operators/raidian.png" alt="Raidian operator portrait" loading="lazy"><span class="operator-role">Specialist // Unverified</span><span class="operator-name">Raidian</span></button>
+					<button class="operator-card" data-name="Amiya" data-role="Caster // Leader" data-note="Rhodes Island command support and field coordination. Deployment clearance: green."><img src="assets/operators/amiya.png" alt="Amiya operator portrait" loading="lazy"><span class="operator-role">Caster // Leader</span><span class="operator-name">Amiya</span></button>
+					<button class="operator-card" data-name="Texas" data-role="Vanguard // Sword" data-note="A quiet operator with a precise approach to every engagement. Deployment clearance: green."><img src="assets/operators/texas.png" alt="Texas operator portrait" loading="lazy"><span class="operator-role">Vanguard // Sword</span><span class="operator-name">Texas</span></button>
+					<button class="operator-card" data-name="SilverAsh" data-role="Guard // Lord" data-note="A tactician with influence far beyond the battlefield. Deployment clearance: amber."><img src="assets/operators/silverash.png" alt="SilverAsh operator portrait" loading="lazy"><span class="operator-role">Guard // Lord</span><span class="operator-name">SilverAsh</span></button>
+					<button class="operator-card" data-name="Kal'tsit" data-role="Medic // Tactician" data-note="Medical command is monitoring the entire deck. Deployment clearance: restricted."><img src="assets/operators/kaltsit.png" alt="Kal'tsit operator portrait" loading="lazy"><span class="operator-role">Medic // Tactician</span><span class="operator-name">Kal'tsit</span></button>
+				</div>
+				<aside class="operator-detail" aria-live="polite">
+					<img class="detail-portrait" id="operator-portrait" src="assets/operators/lappland.png" alt="Lappland portrait">
+					<div class="detail-copy">
+						<div class="detail-index">Selected operator / 01</div>
+						<h2 id="operator-name">Lappland</h2>
+						<div class="detail-meta"><span id="operator-rarity">6★</span><span id="operator-faction">Rhodes Island</span></div>
+						<p id="operator-note">A sharp and unpredictable blade. Deployment clearance: green.</p>
+						<div class="detail-line"></div>
+						<div class="detail-status" id="operator-status">● Ready for deployment</div>
+					</div>
+				</aside>
+			</div>
+		</section>
+		<div class="footer-line"><span>R.I. command deck / <span class="pulse">● online</span></span><span>Terra // 1097</span></div>
+	</main>
+	<div class="toast" id="toast">COMMAND MAP OPENED // ROUTE LOCKED</div>
+	<script src="script.js"></script>
+</body>
+</html>

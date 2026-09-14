@@ -1,0 +1,6 @@
+.kotak {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 40px;
+    border: 5px solid crimson;
+}

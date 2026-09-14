@@ -1,0 +1,10 @@
+.galeri {
+    display: grid;
+    border: 5px solid crimson;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 12px;
+}
+.galeri div {
+    border: 2px solid crimson;
+}
