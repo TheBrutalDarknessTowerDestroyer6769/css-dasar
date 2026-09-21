@@ -1,0 +1,32 @@
+* {
+    margin: 20px;
+    padding: 10;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar {
+    display: flex;
+    border: 1px solid rgba(0, 122, 236, 0.534);
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-right: 30px;
+    background-color: rgba(0, 122, 236, 0.534);
+    font-family: ;
+}
+.logo {
+    width: 250px;
+    padding-left: 20px;
+}
+
+.hero {
+    padding: 5px;
+    border: 2px solid gray;
+}
+
+.text {
+    text-align: center;
+}
