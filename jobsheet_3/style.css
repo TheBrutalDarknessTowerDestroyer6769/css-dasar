@@ -6,6 +6,10 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #93f2ff, #68aaff) fixed;
+    background-size: cover;
 }
 .navbar {
     display: flex;
@@ -23,10 +27,85 @@ body {
 }
 
 .hero {
-    padding: 5px;
-    border: 2px solid gray;
+    border: 5px solid rgba(0, 122, 236, 0.534);
+    height: 500px;
+    width: 75%;
 }
 
 .text {
+    width: 500px;
+    position: relative;
+    left: 600px;
+    bottom: 420px;
+}
+
+.btn {
+    color: white;
+    position: relative;
+    top: 190px;
+    background-color: crimson;
+    width: 200px;
+    height: 40px;
     text-align: center;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.card {
+    border: 5px solid rgba(0, 122, 236, 0.534);
+    border-radius: 10px;
+    padding: 10px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.produk {
+    border: 5px solid rgba(0, 122, 236, 0.534);
+    border-radius: 10px;
+    width: 75%;
+    margin: 12px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.card h3,
+.card p {
+    margin: 0;
+}
+
+.card button {
+    background-color: crimson;
+    color: white;
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: rgba(0, 122, 236, 0.534);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
