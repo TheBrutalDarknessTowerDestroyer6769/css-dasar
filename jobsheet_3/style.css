@@ -19,14 +19,45 @@ body {
     gap: 16px;
     padding-right: 30px;
     background-color: rgba(0, 122, 236, 0.534);
-    font-family: ;
 }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 12px;
+}
+
+.nav-item {
+    border: none;
+    background: transparent;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item:focus-visible {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-item:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(0.96);
+}
+
 .logo {
     width: 250px;
     padding-left: 20px;
 }
 
 .hero {
+    display: flex;
+    justify-content: space-between;
     border: 5px solid rgba(0, 122, 236, 0.534);
     height: 500px;
     width: 75%;
@@ -35,8 +66,7 @@ body {
 .text {
     width: 500px;
     position: relative;
-    left: 600px;
-    bottom: 420px;
+    right: 300px;
 }
 
 .btn {
